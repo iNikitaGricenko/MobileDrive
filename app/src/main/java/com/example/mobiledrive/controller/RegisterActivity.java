@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 import lombok.SneakyThrows;
 
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private TextInputLayout firstName;
     private TextInputLayout secondName;
@@ -62,7 +62,7 @@ public class Register extends AppCompatActivity {
     private void register() {
         JSONObject postData = new JSONObject();
         postData.put("firstName", firstName.getEditText().getText().toString());
-        postData.put("lastName", secondName.getEditText().getText().toString());
+        postData.put("secondName", secondName.getEditText().getText().toString());
         postData.put("surname", surname.getEditText().getText().toString());
         postData.put("city", cityAutoComplete.getEditText().getText().toString());
         postData.put("phone", phone.getEditText().getText().toString());

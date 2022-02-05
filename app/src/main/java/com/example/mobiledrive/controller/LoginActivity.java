@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mobiledrive.R;
-import com.example.mobiledrive.SettingsActivity;
 import com.example.mobiledrive.model.Token;
 import com.example.mobiledrive.service.ServerRequest;
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,7 +19,7 @@ import org.json.JSONObject;
 
 import lombok.SneakyThrows;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private TextInputLayout phone;
     private TextInputLayout password;
@@ -42,7 +41,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void toRegisterPage(View view) {
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivityForResult(intent, 1);
     }
 
@@ -68,11 +67,11 @@ public class Login extends AppCompatActivity {
 
         sendLoginRequest();
 
-        Intent intent = new Intent(Login.this, MapActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MapActivity.class);
         intent.putExtra("Token", token);
 
-        Login.this.finish();
-        Login.this.startActivity(intent);
+        LoginActivity.this.finish();
+        LoginActivity.this.startActivity(intent);
     }
 
     private void sendLoginRequest() throws java.util.concurrent.ExecutionException, InterruptedException, JSONException {

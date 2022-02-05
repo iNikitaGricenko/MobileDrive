@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".controller.Register" >
+    tools:context=".controller.RegisterActivity" >
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
